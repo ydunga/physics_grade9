@@ -1,0 +1,16 @@
+<!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297" version="1.1" id="svg8" style="">
+  <defs id="defs2"></defs>
+  <metadata id="metadata5">
+    <rdf:rdf>
+      <cc:work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+        <dc:title></dc:title>
+      </cc:work>
+    </rdf:rdf>
+  </metadata>
+  <g id="layer1">
+    <path style="fill: rgb(0, 204, 255); stroke: rgb(0, 0, 0); stroke-width: 3.765; stroke-linecap: butt; stroke-linejoin: round; stroke-opacity: 1; stroke-miterlimit: 4; fill-opacity: 1;" d="m 36.615925,144.59281 h 74.835465 l 0.26727,-28.33057 45.16855,41.15951 -46.23763,35.27958 0.26727,-31.00327 -74.033656,-0.53454 z" id="path833" class="DlECsHcn_0"></path>
+  </g>
+<style data-made-with="vivus-instant">.DlECsHcn_0{stroke-dasharray:345 347;stroke-dashoffset:346;animation:DlECsHcn_draw_0 6200ms linear 0ms infinite,DlECsHcn_fade 6200ms linear 0ms infinite;}@keyframes DlECsHcn_draw{100%{stroke-dashoffset:0;}}@keyframes DlECsHcn_fade{0%{stroke-opacity:1;}93.54838709677419%{stroke-opacity:1;}100%{stroke-opacity:0;}}@keyframes DlECsHcn_draw_0{12.903225806451612%{stroke-dashoffset: 346}45.16129032258064%{ stroke-dashoffset: 0;}100%{ stroke-dashoffset: 0;}}</style></svg>

@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "main.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class = "container">
+        <div class = "toppane">
+          <div class = "heading">
+            <div class = "back">Motion</div>
+          </div>
+              <p>Here you can see the red ball in two kinds of motion. In the first instance, the ball is moving on a plain surface along a straight line. Whereas in the second instance the ball is moving in a circular motion. </p>
+          <p>In simple terms, motion is the movement of an object from one point to another. </p>
+          <br>
+          <svg width = "400" height = "150">
+            <rect x = "10" y = "100" height = "5" width = "390" stroke = "black" fill = "black"/>
+            <circle cx = "30" cy = "80" r = "20" fill = "red" stroke = "black" stroke-width = "3" id = "motion1"/>
+            <animate 
+                     xlink:href = "#motion1"
+                     attributeName = "cx"
+                     from = "30"
+                     to = "350"
+                     dur = "3s"
+                     begin = "0s"
+                     repeatCount = "indefinite"
+                     />
+                     
+          </svg>
+          <svg width = "300" height = "300">
+          
+            <circle cx = "150" cy = "150" r = "50" fill = "none" stroke = "black" stroke-width = "3"/>
+            <circle cx = "150" cy = "100" r = "10" fill = "red" stroke = "black" stroke-width = "3" id = "ball2"/>
+        <path d = "m 0 0
+                   m -50, 50
+                   a 50,50 1 0,0 100,0
+                   a 50,50 1 0,0 -100,0 " stroke = "none" fill= "none" id = "circlemotion"/>
+            <animateMotion
+                           xlink:href = "#ball2"
+                           dur = "3s"
+                           begin = "0s"
+                           repeatCount = "indefinite"
+                           
+                           >
+              <mpath xlink:href = "#circlemotion"/>
+            </animateMotion>
+          </svg>
+          <br>
+      
+          <p>The <b>magnitude</b> of motion measures the physical distance an object may have covered in its motion. The distance can be measured in centimeter, meter, kilometer or any of the standard units of measurement for length/distance.  </p>
+          <p>The <b>displacement</b> of an object, on the other hand, tells us how far the object is from its starting position after motion. </p>
+          <p>Different objects take varying amounts of time to cover a given distance. </p>
+          <svg width = "400" height = "150">
+            
+            <circle cx = "20" cy = "50" r = "10" fill = "red" stroke = "black" stroke-width = "3" id = "moveit1"/>
+            <circle cx = "20" cy = "100" r = "6" fill = "pink" stroke = "black" stroke-width = "3" id = "moveit2"/>
+            <animate
+                     xlink:href = "#moveit1"
+                     attributeName = "cx"
+                     from = "20"
+                     to = "380"
+                     dur = "10s"
+                     begin = "0s"
+                     repeatCount = "indefinite"/>
+            <animate 
+                     xlink:href = "#moveit2"
+                     attributeName = "cx"
+                     from = "20"
+                     to = "380"
+                     dur = "5s"
+                     begin = "0s"
+                     repeatCount = "indefinite"/>
+          </svg>
+          <p>In the illustration above, both the circles are covering the same distance. The red circle takes 10 seconds to finish the route, while the pink cirlce takes 5 seconds. </p>
+          <p>We can measure how much distance is being covered by each circle per unit of time. </p>
+          <p>In our case we would be measuring, how many pixels are the circles moving forward by in each second. </p>
+          <p>This measure is known as <b>speed</b>. The unit for measurement of speed is m s <sup>-1</sup>.</p>
+          <p>The speed of an object need not be constant over the entire distance. </p>
+          <p>You can see in the illustration below that the speed of the circle changes with time. </p>
+          <p>This is why, when we describe the rate of motion of an object, we talk about average speed. </p>
+          <svg width = "400" height = "150">
+            <circle cx = "20" cy = "80" r = "15" fill = "red" stroke = "black" stroke-width = "3" id = "moveit3"/>
+            <path d = "m0,0 l 380,0" id = "avgspeed" stroke = "none"/>
+            <animateMotion 
+                           xlink:href = "#moveit3"
+                           keyPoints = "0;0.5;1"
+                           keyTimes = "0;0.15;1"
+                           dur = "3s"
+                           calcMode="linear"
+                           begin = "0s"
+                           repeatCount = "indefinite">
+              <mpath xlink:href = "#avgspeed"/>
+            </animateMotion>
+      
+                           
+          </svg>
+          <br>
+          <p>Average speed can be obtained by dividing the total distance travelled by total time taken. </p>
+          <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+      
+       <g>
+        <title>Layer 1</title>
+        <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="20" id="svg_1" y="104.34243" x="29.61936" opacity="undefined" stroke-width="0" stroke="#000" fill="#000000">speed (v) =</text>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="20" id="svg_3" y="79.67737" x="158.70959" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">Total distance (s)</text>
+        <line stroke-linecap="null" stroke-linejoin="null" id="svg_4" y2="93.22578" x2="323.22606" y1="92.58062" x1="140.64503" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke="#000" fill="none"/>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="20" id="svg_5" y="118.38712" x="161.29024" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">Total time taken (t)</text>
+       </g>
+      </svg>
+          <br>
+          <p>We can also represent distance travelled in a certain time period using graphs. </p>
+          <p>For example, below you see a distance time graph of an object moving with uniform speed. </p>
+          <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+       <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+      
+       <g id="Layer_1">
+        <title>Layer 1</title>
+      
+        <metadata transform="matrix(0.3802791843162403,0,0,0.3802791843162403,0,0) " id="svg_51">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.33422975614782047,0,0,0.33422975614782047,0,0) " id="svg_174">image/svg+xml</metadata>
+        <g stroke="null" id="svg_176">
+         <g stroke="null" transform="matrix(0.9274706429001881,0,0,0.9209355308981884,-263.37374458589545,-268.56555522067265) " id="svg_116">
+          <g stroke="null" id="svg_118">
+           <path stroke="#000000" fill="none" stroke-width="3.1614" stroke-miterlimit="4" id="svg_173" d="m334.20318,323.53987l0,228.86458l243.41667,0.00001"/>
+           <path stroke="#000000" fill="#000000" stroke-width="0.26458px" id="svg_172" d="m332.86868,314.27945l-7.9375,14.55208l17.19792,0l-9.26042,-14.55208z"/>
+           <path stroke="#000000" fill="#000000" stroke-width="0.26458px" id="svg_171" d="m585.55735,552.40446l-16.22842,-8.99686l0.35342,16.93436l15.875,-7.9375z"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_170" d="m334.20318,525.94612c10.58333,0 10.58333,0 10.58333,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_169" d="m334.20318,499.48779c10.58333,0 10.58333,0 10.58333,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_168" d="m334.20318,473.02946c10.58333,0 10.58333,0 10.58333,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_167" d="m334.20318,446.57112c10.58333,0 10.58333,0 10.58333,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_166" d="m334.20318,417.46696c10.58333,0 10.58333,0 10.58333,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_165" d="m334.20318,393.65446c10.58333,0 10.58333,0 10.58333,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_164" d="m334.20318,367.19613c10.58333,0 10.58333,0 10.58333,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_163" d="m334.20318,340.73779c10.58333,0 10.58333,0 10.58333,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_162" d="m361.97285,551.08153c0.01158,-10.58332 0.01158,-10.58332 0.01158,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_161" d="m391.07702,552.40444c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_160" d="m420.18117,552.40444c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_159" d="m449.28533,551.08153c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_158" d="m478.3895,551.08153c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_157" d="m507.50527,551.08154c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_156" d="m536.60943,551.08154c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_155" d="m564.3791,551.08153c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_153" y="582.40857" x="538.29254" xml:space="preserve">
+            <tspan stroke="null" font-size="12.7px" stroke-width="0.26458" y="582.40857" x="538.29254" id="svg_154">Time(s)</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" transform="rotate(-91.70277404785156 289.2124328613282,286.4981994628906) " id="svg_151" y="297.28457" x="87.81666" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="297.28457" x="87.81666" id="svg_152">Distance(m)</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_149" y="565.50604" x="353.1401" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="565.50604" x="353.1401" id="svg_150">10</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_147" y="565.27805" x="382.45368" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="565.27805" x="382.45368" id="svg_148">20</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_145" y="564.56747" x="411.51827" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="564.56747" x="411.51827" id="svg_146">30</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_143" y="564.57309" x="442.20315" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="564.57309" x="442.20315" id="svg_144">40</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_141" y="563.97934" x="470.84572" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="563.97934" x="470.84572" id="svg_142">50</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_139" y="563.43955" x="499.73071" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="563.43955" x="499.73071" id="svg_140">60</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_137" y="564.6359" x="529.23367" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="564.6359" x="529.23367" id="svg_138">70</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_135" y="530.16699" x="317.00349" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="530.16699" x="317.00349" id="svg_136">10</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_133" y="504.67702" x="316.45349" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="504.67702" x="316.45349" id="svg_134">20</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_131" y="477.79941" x="317.06584" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="477.79941" x="317.06584" id="svg_132">30</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_129" y="451.45419" x="316.79829" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="451.45419" x="316.79829" id="svg_130">40</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_127" y="422.80696" x="316.58982" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="422.80696" x="316.58982" id="svg_128">50</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_125" y="398.89159" x="316.62378" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="398.89159" x="316.62378" id="svg_126">60</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_123" y="373.23085" x="316.26317" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="373.23085" x="316.26317" id="svg_124">70</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_121" y="345.39661" x="316.57583" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="345.39661" x="316.57583" id="svg_122">80</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_119" y="564.27252" x="556.66354" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="564.27252" x="556.66354" id="svg_120">80</tspan>
+           </text>
+          </g>
+          <ellipse id = "moveit4" stroke="#000000" fill="#ff0000" fill-opacity="0.96078" stroke-width="1.90682" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" ry="6.74516" rx="6.44809" cy="551.59442" cx="333.9663" id="svg_117"/>
+            <path id = "timedistancemove" d = "m0,0 l 220, -220"/>
+           <animateMotion 
+                          xlink:href = "#moveit4"
+                          dur = "5s"
+                          begin = "0s"
+                          fill = "freeze"
+                          repeatCount = "indefinite"
+                          >
+             <mpath xlink:href = "#timedistancemove"/>
+           </animateMotion>
+          <path id = "followmoveit4" d = "m333,551 l 220 -220" stroke = "black" opacity = "0.5"/>
+        
+                          
+         </g>
+        </g>
+       </g>
+       
+      </svg>
+        </div>
+        <div class = "middlepane">
+          <div class = "subheading">
+            <div class = "subback">Velocity</div>
+          </div>
+          <p>Motion is not always along a straight path. realistically, objects change direction when in motion. </p>
+          <p>When we add the directional quality to speed we can better describe the motion of an object. This measure is known as <b>velocity.</b></p>
+          <p>The main difference when calculating speed vs velocity is that instead of distance we are now measuring displacement. </p>
+          <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+      
+       <g>
+        <title>Layer 1</title>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="20" id="svg_1" y="107.10737" x="36.49485" opacity="undefined" stroke-width="0" stroke="#000" fill="#000000">velocity(v) =</text>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="20" id="svg_3" y="81.61286" x="190.96772" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">displacement</text>
+        <line stroke-linecap="null" stroke-linejoin="null" id="svg_4" y2="100.58069" x2="345.32761" y1="99.93553" x1="162.74659" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke="#000" fill="none"/>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="20" id="svg_5" y="140.6176" x="204.73762" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">time taken</text>
+       </g>
+      </svg>
+          <p>Average velocity can be calculated the same way as average speed. </p>
+          <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+      
+       <g>
+        <title>Layer 1</title>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="20" id="svg_1" y="98.53596" x="14.78062" opacity="undefined" stroke-width="0" stroke="#000" fill="#000000">avg velocity(v) =</text>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="20" id="svg_3" y="57.74184" x="212.90325" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">initial velocity (u)</text>
+        <line stroke-linecap="null" stroke-linejoin="null" id="svg_4" y2="112.58066" x2="371.61325" y1="111.9355" x1="189.03223" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke="#000" fill="none"/>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="20" id="svg_5" y="142.90331" x="266.45174" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">2</text>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="20" id="svg_6" y="75.80639" x="270.32272" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">+</text>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="20" id="svg_7" y="92.58062" x="216.12906" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">final velocity(v)</text>
+       </g>
+      </svg>
+          <p>Below you can see a graph of the velocity of the circle with respect to time. You can tell from the graph that the velocity of the object is increasing with time. </p>
+          <p>Click on the red circle to start its movement. </p>
+          <br>
+          <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+       <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+      
+       <g id="Layer_1">
+        <title>Layer 1</title>
+      
+        <metadata transform="matrix(0.09765625,0,0,0.09765625,0,0) " id="svg_125">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.177978515625,0,0,0.177978515625,0,0) " id="svg_258">image/svg+xml</metadata>
+        <g stroke="null" id="svg_260">
+         <g stroke="null" transform="matrix(0.9809163177098356,0,0,0.9985004581469289,-678.9449181717331,-702.0440254403484) " id="svg_195">
+          <g stroke="null" id="svg_199">
+           <path stroke="#000000" fill="none" stroke-width="3.1614" stroke-miterlimit="4" id="svg_257" d="m740.57051,726.29627l0,228.86458l243.41667,0.00001"/>
+           <path stroke="#000000" fill="#000000" stroke-width="0.26458px" id="svg_256" d="m739.23601,717.03585l-7.9375,14.55208l17.19792,0l-9.26042,-14.55208z"/>
+           <path stroke="#000000" fill="#000000" stroke-width="0.26458px" id="svg_255" d="m991.92468,955.16086l-16.22842,-8.99686l0.35342,16.93436l15.875,-7.9375z"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_254" d="m740.57051,928.70252c10.58333,0 10.58333,0 10.58333,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_253" d="m740.57051,902.24419c10.58333,0 10.58333,0 10.58333,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_252" d="m740.57051,875.78586c10.58333,0 10.58333,0 10.58333,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_251" d="m740.57051,849.32752c10.58333,0 10.58333,0 10.58333,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_250" d="m740.57051,820.22336c10.58333,0 10.58333,0 10.58333,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_249" d="m740.57051,796.41086c10.58333,0 10.58333,0 10.58333,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_248" d="m740.57051,769.95253c10.58333,0 10.58333,0 10.58333,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_247" d="m740.57051,743.49419c10.58333,0 10.58333,0 10.58333,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_246" d="m768.34018,953.83793c0.01158,-10.58332 0.01158,-10.58332 0.01158,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_245" d="m797.44435,955.16084c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_244" d="m826.5485,955.16084c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_243" d="m855.65266,953.83793c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_242" d="m884.75683,953.83793c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_241" d="m913.8726,953.83794c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_240" d="m942.97676,953.83794c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_239" d="m970.74643,953.83793c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_237" y="985.16497" x="944.65987" xml:space="preserve">
+            <tspan stroke="null" font-size="12.7px" stroke-width="0.26458" y="985.16497" x="944.65987" id="svg_238">Time(s)</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_235" y="968.26244" x="759.50743" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="968.26244" x="759.50743" id="svg_236">10</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_233" y="968.03445" x="788.82101" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="968.03445" x="788.82101" id="svg_234">20</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_231" y="967.32387" x="817.8856" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="967.32387" x="817.8856" id="svg_232">30</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_229" y="967.32949" x="848.57048" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="967.32949" x="848.57048" id="svg_230">40</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_227" y="966.73574" x="877.21305" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="966.73574" x="877.21305" id="svg_228">50</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_225" y="966.19595" x="906.09804" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="966.19595" x="906.09804" id="svg_226">60</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_223" y="967.3923" x="935.601" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="967.3923" x="935.601" id="svg_224">70</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_221" y="932.92339" x="723.37082" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="932.92339" x="723.37082" id="svg_222">10</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_219" y="907.43342" x="722.82082" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="907.43342" x="722.82082" id="svg_220">20</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_217" y="880.55581" x="723.43317" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="880.55581" x="723.43317" id="svg_218">30</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_215" y="854.21059" x="723.16562" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="854.21059" x="723.16562" id="svg_216">40</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_213" y="825.56336" x="722.95715" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="825.56336" x="722.95715" id="svg_214">50</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_211" y="801.64799" x="722.99111" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="801.64799" x="722.99111" id="svg_212">60</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_209" y="775.98725" x="722.6305" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="775.98725" x="722.6305" id="svg_210">70</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_207" y="748.153" x="722.94315" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="748.153" x="722.94315" id="svg_208">80</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_205" y="967.02892" x="963.03087" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="967.02892" x="963.03087" id="svg_206">80</tspan>
+           </text>
+           <g stroke="null" transform="rotate(-91.0891342163086 678.8191528320312,823.8687133789062) " id="svg_200">
+            <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" transform="rotate(-0.40641188621520996 695.5797729492572,689.2545776367158) " id="svg_203" y="858.78934" x="606.20697" xml:space="preserve">
+             <tspan stroke="null" stroke-width="0.26458" y="858.78934" x="606.20697" id="svg_204">Velocity(km h   )</tspan>
+            </text>
+            <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_201" y="854.49349" x="680.12549" xml:space="preserve">
+             <tspan stroke="null" stroke-width="0.26458" y="854.49349" x="680.12549" id="svg_202">-1</tspan>
+            </text>
+           </g>
+          </g>
+              <path stroke="#000000" fill="lightblue" stroke-width="0.26458px" id="svg_196" d="m743.20476,953.83793l111.125,-111.125l0,111.125l-111.125,0z"/>
+               <path stroke="#000000" fill="none" stroke-width="1.665" stroke-miterlimit="4" id="svg_197" d="m743.20476,953.83793l211.66667,-211.66666"/>
+          <ellipse id = "moveit5" stroke="#000000" fill="#ff0000" fill-opacity="0.96078" stroke-width="1.90682" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" ry="6.74516" rx="6.44809" cy="955.98925" cx="739.1048" id="svg_198"/>
+              <path stroke="red" fill="none" stroke-width="1.665" stroke-miterlimit="4" id="followpath" d="m0,0 l 111.66667,-111.66666"/>
+           <animateMotion
+                          xlink:href = "#moveit5"
+                          dur = "2s"
+                          begin = "click"
+                          fill = "freeze">
+             <mpath xlink:href = "#followpath"/>
+           </animateMotion>
+          <path stroke="#000000" fill="none" stroke-width="1.665" stroke-miterlimit="4" id="svg_197" d="m743.20476,953.83793l211.66667,-211.66666"/>
+       
+         </g>
+        </g>
+       </g>
+      </svg>
+          <p>If you want to find the distance travelled by the circle, then you have to find the area of the blue traingle. </p>
+          <p>You know the area of a triangle is given by the formula below. </p>
+          <p>In our velocity-time graph, the base is the distance travelled by the circle and the height is the final velocity of the cirlce. </p>
+          <svg width="550" height="300" xmlns="http://www.w3.org/2000/svg">
+       <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+      
+       <g id="Layer_1">
+        <title>Layer 1</title>
+        <metadata id="svg_125">image/svg+xml</metadata>
+        <metadata id="svg_258">image/svg+xml</metadata>
+        <text stroke="#000" xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_1" y="155.17241" x="98.98285" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" fill="#000000">Area of triangle =</text>
+        <text stroke="#000" xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_2" y="141.0557" x="253.87934" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" fill="#000000">1</text>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_3" y="174.31562" x="255.11277" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">2</text>
+        <line stroke-linecap="null" stroke-linejoin="null" id="svg_4" y2="150.45094" x2="277.62576" y1="151.22017" x1="243.77975" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke="#000" fill="none"/>
+        <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_7" y="156.2069" x="282.41388" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">X</text>
+        <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_8" y="149.31034" x="311.37943" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">base X height</text>
+       </g>
+      </svg>
+        </div>
+        <div class = "bottompane">
+          <div class = "subheading">
+            <div class = "subback">Acceleration</div>
+          </div>
+          <p>Acceleration measures the change in the velocity of an object, per unit of time. </p>
+          <p>We can measure acceleration using the simple formula below - </p>
+          <svg width="500" height="200" xmlns="http://www.w3.org/2000/svg">
+       <g>
+        <title>Layer 1</title>
+        <text fill="#000000" stroke="#000" stroke-width="0" opacity="undefined" x="12.49485" y="105.10737" id="svg_1" font-size="20" font-family="sans-serif" text-anchor="start" xml:space="preserve">acceleration(a) =</text>
+        <text style="cursor: move;" fill="#000000" stroke="#000" stroke-width="0" stroke-dasharray="null" stroke-opacity="null" fill-opacity="null" opacity="undefined" x="181.96772" y="88.61286" id="svg_3" font-size="20" font-family="sans-serif" text-anchor="start" xml:space="preserve">final velocity(v) - initial velocity(u)</text>
+        <line stroke="#000" fill="none" stroke-dasharray="null" stroke-opacity="null" fill-opacity="null" opacity="undefined" x1="178.74659" y1="99.93553" x2="471.32761" y2="100.58069" id="svg_4" stroke-linejoin="null" stroke-linecap="null"/>
+        <text style="cursor: move;" fill="#000000" stroke="#000" stroke-width="0" stroke-dasharray="null" stroke-opacity="null" fill-opacity="null" opacity="undefined" x="252.73762" y="128.6176" id="svg_5" font-size="20" font-family="sans-serif" text-anchor="start" xml:space="preserve">time taken</text>
+       </g>
+      
+      </svg>
+          <p>Positive acceleration is acceleration in the same direction as velocity, whereas if acceleration is the in the opposite direction it is called negative acceleration. </p>
+          <p>The unit of measurement for acceleration is m s <sup>-2</sup>.</p>
+          <br>
+          <p>We can relate the velocity, acceleration and distance travelled by an object graphically and through equations. </p>
+          <svg width="500.00000000000006" height="500.00000000000006" xmlns="http://www.w3.org/2000/svg">
+       <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+      
+       <g id="Layer_1">
+        <title>Layer 1</title>
+        <metadata id="svg_125">image/svg+xml</metadata>
+        <metadata id="svg_258">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.47675620158044296,0,0,0.47675620158044296,0,0) " id="svg_117">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.47675620158044296,0,0,0.47675620158044296,0,0) " id="svg_229">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.24999877810627513,0,0,0.24999877810627513,0,0) " id="svg_349">image/svg+xml</metadata>
+        <g stroke="null" id="svg_351">
+         <g stroke="null" transform="matrix(1.4137175118129681,0,0,1.626139270270262,-1161.6370957506103,-1376.675449649446) " id="svg_293">
+          <g stroke="null" transform="matrix(0.95884854,0,0,0.87571086,66.899218,-2.8847365) " id="svg_328">
+           <path stroke="#000000" fill="none" stroke-width="3.365" stroke-miterlimit="4" id="svg_348" d="m895.75252,986.83575l0,259.29166l243.41667,0.00001"/>
+           <path stroke="#000000" fill="#000000" stroke-width="0.26458px" id="svg_347" d="m895.75252,982.867l-7.9375,14.55208l17.19792,0l-9.26042,-14.55208z"/>
+           <path stroke="#000000" fill="#000000" stroke-width="0.26458px" id="svg_346" d="m1147.10669,1246.12742l-16.22842,-8.99686l0.35342,16.93436l15.875,-7.9375z"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_345" d="m895.75252,1219.66908c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_344" d="m895.75252,1193.21075c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_343" d="m895.75252,1166.75242c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_342" d="m895.75252,1140.29408c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_341" d="m895.75252,1111.18992c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_340" d="m895.75252,1087.37742c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_339" d="m895.75252,1060.91908c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_338" d="m895.75252,1034.46075c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_337" d="m895.75252,1008.00242c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_336" d="m923.52219,1244.80449c0.01158,-10.58332 0.01158,-10.58332 0.01158,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_335" d="m952.62636,1246.1274c0.01158,-10.58332 0.01158,-10.58332 0.01158,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_334" d="m981.73051,1246.1274c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_333" d="m1010.83467,1244.80449c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_332" d="m1039.93884,1244.80449c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_331" d="m1069.05461,1244.8045c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_330" d="m1098.15877,1244.8045c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_329" d="m1125.92844,1244.80449c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+          </g>
+          <path stroke="#000000" fill="none" stroke-width="3.1751" stroke-miterlimit="4" id="svg_327" d="m925.79023,1018.85304c109.75379,-95.34526 109.75379,-95.34526 109.75379,-95.34526"/>
+          <path stroke="#000000" fill="none" stroke-width="1.06754" stroke-miterlimit="4" stroke-dasharray="3.2026, 1.06754" stroke-dashoffset="0" id="svg_326" d="m1035.54402,923.50778c0.59256,163.69631 0.59256,163.69631 0.59256,163.69631"/>
+          <path stroke="#000000" fill="none" stroke-width="1.34243" stroke-miterlimit="4" stroke-dasharray="4.02729, 1.34243" stroke-dashoffset="0" id="svg_325" d="m925.79023,1018.85304l110.0046,-0.17433"/>
+          <path stroke="#000000" fill="none" stroke-width="1.34243" stroke-miterlimit="4" stroke-dasharray="4.02729, 1.34243" stroke-dashoffset="0" id="svg_324" d="m925.81697,925.45639c109.72705,-1.94861 109.72705,-1.94861 109.72705,-1.94861"/>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_321" y="1138.37753" x="953.93102" xml:space="preserve">
+           <tspan stroke="null" stroke-width="0.26458" y="1138.37753" x="953.93102" id="svg_322">
+            <tspan stroke="null" font-size="14.1111px" id="svg_323">Time (s)</tspan>
+           </tspan>
+          </text>
+          <g stroke="null" transform="rotate(-90.43250274658203 931.5746459960938,845.6126708984375) " id="svg_316">
+           <text stroke="null" font-size="12.7px" font-family="sans-serif" stroke-width="0.26458" id="svg_319" y="796.95559" x="755.87238" xml:space="preserve">
+            <tspan stroke="null" font-size="12.7px" stroke-width="0.26458" y="796.95559" x="755.87238" id="svg_320">Velocity (ms   )</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_317" y="789.93911" x="835.62643" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="789.93911" x="835.62643" id="svg_318">-1</tspan>
+           </text>
+          </g>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" fill="#000000" stroke-width="0.26458" id="svg_314" y="1019.34134" x="911.90548" xml:space="preserve">
+           <tspan stroke="null" font-size="14.1111px" fill="#000000" stroke-width="0.26458" y="1019.34134" x="911.90548" id="svg_315">A</tspan>
+          </text>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_312" y="929.57686" x="913.13943" xml:space="preserve">
+           <tspan stroke="null" font-size="14.1111px" stroke-width="0.26458" y="929.57686" x="913.13943" id="svg_313">E</tspan>
+          </text>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_310" y="925.20231" x="1040.00157" xml:space="preserve">
+           <tspan stroke="null" font-size="14.1111px" stroke-width="0.26458" y="925.20231" x="1040.00157" id="svg_311">B</tspan>
+          </text>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_308" y="1022.78856" x="1040.00155" xml:space="preserve">
+           <tspan stroke="null" font-size="14.1111px" stroke-width="0.26458" y="1022.78856" x="1040.00155" id="svg_309">D</tspan>
+          </text>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_306" y="1103.54957" x="1035.9635" xml:space="preserve">
+           <tspan stroke="null" font-size="14.1111px" stroke-width="0.26458" y="1103.54957" x="1035.9635" id="svg_307">C</tspan>
+          </text>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_304" y="1102.20356" x="915.15846" xml:space="preserve">
+           <tspan stroke="null" font-size="14.1111px" stroke-width="0.26458" y="1102.20356" x="915.15846" id="svg_305">O</tspan>
+          </text>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" fill="#ff2a2a" stroke-width="0.26458" id="svg_302" y="1050.15426" x="842.56337" xml:space="preserve">
+           <tspan stroke="null" fill="#ff2a2a" stroke-width="0.26458" y="1050.15426" x="842.56337" id="svg_303">initial velocity</tspan>
+          </text>
+          <g stroke="null" fill="#ff2a2a" id="svg_299">
+           <path stroke="#000000" fill="#ff2a2a" stroke-width="0.965" stroke-miterlimit="4" id="svg_301" d="m902.84137,1037.88204c9.59037,-15.31095 9.59037,-15.31095 9.59037,-15.31095"/>
+           <path stroke="#000000" fill="#ff2a2a" stroke-width="0.26458px" id="svg_300" d="m912.96519,1021.89834l-4.93734,2.88508l4.283,2.61739l0.65434,-5.50247z"/>
+          </g>
+          <g stroke="null" fill="#ff2a2a" transform="rotate(102.69905853271484 953.9750366210938,970.9918212890626) " id="svg_296">
+           <path stroke="#000000" fill="#ff2a2a" stroke-width="0.965" stroke-miterlimit="4" id="svg_298" d="m902.84137,1037.88204c9.59037,-15.31095 9.59037,-15.31095 9.59037,-15.31095"/>
+           <path stroke="#000000" fill="#ff2a2a" stroke-width="0.26458px" id="svg_297" d="m912.96519,1021.89834l-4.93734,2.88508l4.283,2.61739l0.65434,-5.50247z"/>
+          </g>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" fill="#ff2a2a" stroke-width="0.26458" id="svg_294" y="890.76032" x="837.01874" xml:space="preserve">
+           <tspan stroke="null" fill="#ff2a2a" stroke-width="0.26458" y="890.76032" x="837.01874" id="svg_295">final velocity</tspan>
+          </text>
+         </g>
+        </g>
+       </g>
+      </svg>
+          <p>In the graph above, the initial velocity of the object is <b>u</b>. </p>
+          <p>The final velocity of the object is <b>v</b>.</p>
+          <p><b>a</b> is the uniform acceleration of the object.</p>
+          <p>and <b>s</b> is the distance travelled by the object in time <b>t</b>.</p>
+          <p>Graphically, the initial velocity is <b> OA </b> and the final velocity is <b>BC</b>.</p>
+          <p>The time interval is represented by <b>OC</b>.</p>
+          <p>and finally <b>BD</b> represents the change in velocity between u and v.</p>
+          <p>The line BC = BD+DC</p>
+         <svg width="499.99999999999994" height="499.99999999999994" xmlns="http://www.w3.org/2000/svg">
+       <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+      
+       <g id="Layer_1">
+        <title>Layer 1</title>
+        <metadata id="svg_125">image/svg+xml</metadata>
+        <metadata id="svg_258">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.47675620158044296,0,0,0.47675620158044296,0,0) " id="svg_117">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.47675620158044296,0,0,0.47675620158044296,0,0) " id="svg_229">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.24999877810627513,0,0,0.24999877810627513,0,0) " id="svg_349">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.2743764469683043,0,0,0.2743764469683043,0,0) " id="svg_473">image/svg+xml</metadata>
+        <g stroke="null" id="svg_475">
+         <g stroke="null" transform="matrix(1.4541026995631854,0,0,1.6370872639249647,-1075.949091980315,-1244.583605694328) " id="svg_415">
+          <g stroke="null" transform="matrix(0.95884854,0,0,0.87571086,66.899218,-2.8847365) " id="svg_452">
+           <path stroke="#000000" fill="none" stroke-width="3.365" stroke-miterlimit="4" id="svg_472" d="m802.83888,885.65424l0,259.29166l243.41667,0.00001"/>
+           <path stroke="#000000" fill="#000000" stroke-width="0.26458px" id="svg_471" d="m802.83888,881.68549l-7.9375,14.55208l17.19792,0l-9.26042,-14.55208z"/>
+           <path stroke="#000000" fill="#000000" stroke-width="0.26458px" id="svg_470" d="m1054.19305,1144.94591l-16.22842,-8.99686l0.35342,16.93436l15.875,-7.9375z"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_469" d="m802.83888,1118.48757c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_468" d="m802.83888,1092.02924c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_467" d="m802.83888,1065.57091c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_466" d="m802.83888,1039.11257c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_465" d="m802.83888,1010.00841c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_464" d="m802.83888,986.19591c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_463" d="m802.83888,959.73757c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_462" d="m802.83888,933.27924c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_461" d="m802.83888,906.82091c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_460" d="m830.60855,1143.62298c0.01158,-10.58332 0.01158,-10.58332 0.01158,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_459" d="m859.71272,1144.94589c0.01158,-10.58332 0.01158,-10.58332 0.01158,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_458" d="m888.81687,1144.94589c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_457" d="m917.92103,1143.62298c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_456" d="m947.0252,1143.62298c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_455" d="m976.14097,1143.62299c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_454" d="m1005.24513,1143.62299c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_453" d="m1033.0148,1143.62298c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+          </g>
+          <path stroke="#000000" fill="none" stroke-width="3.1751" stroke-miterlimit="4" id="svg_451" d="m836.70009,930.24727c109.75379,-95.34526 109.75379,-95.34526 109.75379,-95.34526"/>
+          <path stroke="#000000" fill="none" stroke-width="1.06754" stroke-miterlimit="4" stroke-dasharray="3.2026, 1.06754" stroke-dashoffset="0" id="svg_450" d="m946.45388,834.90201c0.59256,163.69631 0.59256,163.69631 0.59256,163.69631"/>
+          <path stroke="#000000" fill="none" stroke-width="1.34243" stroke-miterlimit="4" stroke-dasharray="4.02729, 1.34243" stroke-dashoffset="0" id="svg_449" d="m836.70009,930.24727l110.0046,-0.17433"/>
+          <path stroke="#000000" fill="none" stroke-width="1.34243" stroke-miterlimit="4" stroke-dasharray="4.02729, 1.34243" stroke-dashoffset="0" id="svg_448" d="m836.72683,836.85062c109.72705,-1.94861 109.72705,-1.94861 109.72705,-1.94861"/>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_445" y="1049.77176" x="864.84088" xml:space="preserve">
+           <tspan stroke="null" stroke-width="0.26458" y="1049.77176" x="864.84088" id="svg_446">
+            <tspan stroke="null" font-size="14.1111px" id="svg_447">Time (s)</tspan>
+           </tspan>
+          </text>
+          <g stroke="null" transform="rotate(-90.43250274658203 842.4844970703125,757.0068969726562) " id="svg_440">
+           <text stroke="null" font-size="12.7px" font-family="sans-serif" stroke-width="0.26458" id="svg_443" y="708.34982" x="666.78223" xml:space="preserve">
+            <tspan stroke="null" font-size="12.7px" stroke-width="0.26458" y="708.34982" x="666.78223" id="svg_444">Velocity (ms   )</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_441" y="701.33334" x="746.53628" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="701.33334" x="746.53628" id="svg_442">-1</tspan>
+           </text>
+          </g>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" fill="#000000" stroke-width="0.26458" id="svg_438" y="930.73557" x="822.81533" xml:space="preserve">
+           <tspan stroke="null" font-size="14.1111px" fill="#000000" stroke-width="0.26458" y="930.73557" x="822.81533" id="svg_439">A</tspan>
+          </text>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_436" y="840.97108" x="824.04928" xml:space="preserve">
+           <tspan stroke="null" font-size="14.1111px" stroke-width="0.26458" y="840.97108" x="824.04928" id="svg_437">E</tspan>
+          </text>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_434" y="836.59653" x="950.91143" xml:space="preserve">
+           <tspan stroke="null" font-size="14.1111px" stroke-width="0.26458" y="836.59653" x="950.91143" id="svg_435">B</tspan>
+          </text>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_432" y="934.18279" x="950.91141" xml:space="preserve">
+           <tspan stroke="null" font-size="14.1111px" stroke-width="0.26458" y="934.18279" x="950.91141" id="svg_433">D</tspan>
+          </text>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_430" y="1014.9438" x="946.87336" xml:space="preserve">
+           <tspan stroke="null" font-size="14.1111px" stroke-width="0.26458" y="1014.9438" x="946.87336" id="svg_431">C</tspan>
+          </text>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_428" y="1013.59779" x="826.06831" xml:space="preserve">
+           <tspan stroke="null" font-size="14.1111px" stroke-width="0.26458" y="1013.59779" x="826.06831" id="svg_429">O</tspan>
+          </text>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" fill="#ff2a2a" stroke-width="0.26458" id="svg_426" y="961.54849" x="753.47323" xml:space="preserve">
+           <tspan stroke="null" fill="#ff2a2a" stroke-width="0.26458" y="961.54849" x="753.47323" id="svg_427">initial velocity</tspan>
+          </text>
+          <g stroke="null" fill="#ff2a2a" id="svg_423">
+           <path stroke="#000000" fill="#ff2a2a" stroke-width="0.965" stroke-miterlimit="4" id="svg_425" d="m813.75123,949.27627c9.59037,-15.31095 9.59037,-15.31095 9.59037,-15.31095"/>
+           <path stroke="#000000" fill="#ff2a2a" stroke-width="0.26458px" id="svg_424" d="m823.87505,933.29257l-4.93734,2.88508l4.283,2.61739l0.65434,-5.50247z"/>
+          </g>
+          <g stroke="null" fill="#ff2a2a" transform="rotate(102.69905853271484 864.8848876953125,882.3860473632812) " id="svg_420">
+           <path stroke="#000000" fill="#ff2a2a" stroke-width="0.965" stroke-miterlimit="4" id="svg_422" d="m813.75123,949.27627c9.59037,-15.31095 9.59037,-15.31095 9.59037,-15.31095"/>
+           <path stroke="#000000" fill="#ff2a2a" stroke-width="0.26458px" id="svg_421" d="m823.87505,933.29257l-4.93734,2.88508l4.283,2.61739l0.65434,-5.50247z"/>
+          </g>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" fill="#ff2a2a" stroke-width="0.26458" id="svg_418" y="802.15454" x="747.92859" xml:space="preserve">
+           <tspan stroke="null" fill="#ff2a2a" stroke-width="0.26458" y="802.15454" x="747.92859" id="svg_419">final velocity</tspan>
+          </text>
+          <path stroke="#e20000" fill="none" opacity="0.997" stroke-width="1.23825" stroke-miterlimit="4" id="svg_417" d="m964.4949,831.98588c9.13127,0 9.13127,0 9.13127,0l0,98.16113l-8.21814,0"/>
+          <path stroke="#e30000" fill="none" stroke-width="0.97896" stroke-miterlimit="4" id="svg_416" d="m964.4949,933.11467c8.90299,0 8.67471,-0.22828 8.67471,-0.22828l0,53.87448l-8.44642,0.22828"/>
+         </g>
+        </g>
+       </g>
+      </svg>
+          <p>You can see from the graph that CD = OA </p>
+          <p>So we can rewrite BC = BD + OA</p>
+          <p>This means v = BD + u</p>
+          <p>or BD = v - u</p>
+          <p>If you recall the formula for acceleration then you know that </p>
+          <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+       <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+      
+       <g id="Layer_1">
+        <title>Layer 1</title>
+        <metadata id="svg_125">image/svg+xml</metadata>
+        <metadata id="svg_258">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.47675620158044296,0,0,0.47675620158044296,0,0) " id="svg_117">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.47675620158044296,0,0,0.47675620158044296,0,0) " id="svg_229">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.24999877810627513,0,0,0.24999877810627513,0,0) " id="svg_349">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.2743764469683043,0,0,0.2743764469683043,0,0) " id="svg_473">image/svg+xml</metadata>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_476" y="108.97016" x="59.06059" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">a =</text>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_477" y="94.60649" x="93.84861" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">Change in velocity</text>
+        <line stroke-linecap="null" stroke-linejoin="null" id="svg_478" y2="106.66724" x2="242.33211" y1="106.66724" x1="91.00079" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke="#000" fill="none"/>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_479" y="135.33353" x="125.667" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">time taken</text>
+       </g>
+      </svg>
+          <p>We have just derived the change in velocity : v-u = BD. So that means</p>
+          <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+       <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+      
+       <g id="Layer_1">
+        <title>Layer 1</title>
+        <metadata id="svg_125">image/svg+xml</metadata>
+        <metadata id="svg_258">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.47675620158044296,0,0,0.47675620158044296,0,0) " id="svg_117">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.47675620158044296,0,0,0.47675620158044296,0,0) " id="svg_229">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.24999877810627513,0,0,0.24999877810627513,0,0) " id="svg_349">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.2743764469683043,0,0,0.2743764469683043,0,0) " id="svg_473">image/svg+xml</metadata>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_476" y="108.97016" x="59.06059" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">a =</text>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_477" y="95.27315" x="143.84794" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">BD</text>
+        <line stroke-linecap="null" stroke-linejoin="null" id="svg_478" y2="106.66724" x2="242.33211" y1="106.66724" x1="91.00079" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke="#000" fill="none"/>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_479" y="132.6669" x="153.66662" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">t</text>
+       </g>
+      </svg>
+          <p>Which gives us the value of BD = a*t</p>
+          <p>What this means is that the change in velocity is equal to acceleration*time taken.</p>
+          <p>Finally, if we want to get the distance travelled by the object, then we have to find the area of ABCO.</p>
+          <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+       <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+      
+       <g id="Layer_1">
+        <title>Layer 1</title>
+        <metadata id="svg_125">image/svg+xml</metadata>
+        <metadata id="svg_258">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.47675620158044296,0,0,0.47675620158044296,0,0) " id="svg_117">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.47675620158044296,0,0,0.47675620158044296,0,0) " id="svg_229">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.24999877810627513,0,0,0.24999877810627513,0,0) " id="svg_349">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.2743764469683043,0,0,0.2743764469683043,0,0) " id="svg_473">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.510217644820532,0,0,0.510217644820532,0,0) " id="svg_600">image/svg+xml</metadata>
+        <g stroke="null" id="svg_602">
+         <g stroke="null" transform="matrix(1.4205241303928577,0,0,1.6003851648612868,-442.5691750466121,-535.6460559075782) " id="svg_542">
+          <g stroke="null" transform="matrix(0.95884854,0,0,0.87571086,66.899218,-2.8847365) " id="svg_579">
+           <path stroke="#000000" fill="none" stroke-width="3.365" stroke-miterlimit="4" id="svg_599" d="m362.54225,405.10934l0,259.29166l243.41667,0.00001"/>
+           <path stroke="#000000" fill="#000000" stroke-width="0.26458px" id="svg_598" d="m362.54225,401.14059l-7.9375,14.55208l17.19792,0l-9.26042,-14.55208z"/>
+           <path stroke="#000000" fill="#000000" stroke-width="0.26458px" id="svg_597" d="m613.89642,664.40101l-16.22842,-8.99686l0.35342,16.93436l15.875,-7.9375z"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_596" d="m362.54225,637.94267c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_595" d="m362.54225,611.48434c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_594" d="m362.54225,585.02601c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_593" d="m362.54225,558.56767c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_592" d="m362.54225,529.46351c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_591" d="m362.54225,505.65101c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_590" d="m362.54225,479.19267c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_589" d="m362.54225,452.73434c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_588" d="m362.54225,426.27601c10.58334,0 10.58334,0 10.58334,0"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_587" d="m390.31192,663.07808c0.01158,-10.58332 0.01158,-10.58332 0.01158,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_586" d="m419.41609,664.40099c0.01158,-10.58332 0.01158,-10.58332 0.01158,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_585" d="m448.52024,664.40099c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_584" d="m477.6244,663.07808c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_583" d="m506.72857,663.07808c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_582" d="m535.84434,663.07809c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_581" d="m564.9485,663.07809c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+           <path stroke="#000000" fill="none" stroke-width="3.465" stroke-miterlimit="4" id="svg_580" d="m592.71817,663.07808c0.0116,-10.58332 0.0116,-10.58332 0.0116,-10.58332"/>
+          </g>
+          <path stroke="#000000" fill="none" stroke-width="3.1751" stroke-miterlimit="4" id="svg_578" d="m414.52232,509.42891c109.75379,-95.34526 109.75379,-95.34526 109.75379,-95.34526"/>
+          <path stroke="#000000" fill="none" stroke-width="1.06754" stroke-miterlimit="4" stroke-dasharray="3.2026, 1.06754" stroke-dashoffset="0" id="svg_577" d="m524.27611,414.08365c0.59256,163.69631 0.59256,163.69631 0.59256,163.69631"/>
+          <path stroke="#000000" fill="none" stroke-width="1.34243" stroke-miterlimit="4" stroke-dasharray="4.02729, 1.34243" stroke-dashoffset="0" id="svg_576" d="m414.52232,509.42891l110.0046,-0.17433"/>
+          <path stroke="#000000" fill="none" stroke-width="1.34243" stroke-miterlimit="4" stroke-dasharray="4.02729, 1.34243" stroke-dashoffset="0" id="svg_575" d="m414.54906,416.03226c109.72705,-1.94861 109.72705,-1.94861 109.72705,-1.94861"/>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_572" y="628.9534" x="442.66311" xml:space="preserve">
+           <tspan stroke="null" stroke-width="0.26458" y="628.9534" x="442.66311" id="svg_573">
+            <tspan stroke="null" font-size="14.1111px" id="svg_574">Time (s)</tspan>
+           </tspan>
+          </text>
+          <g stroke="null" transform="rotate(-90.43250274658203 420.3067321777343,336.1885681152343) " id="svg_567">
+           <text stroke="null" font-size="12.7px" font-family="sans-serif" stroke-width="0.26458" id="svg_570" y="287.53146" x="244.60447" xml:space="preserve">
+            <tspan stroke="null" font-size="12.7px" stroke-width="0.26458" y="287.53146" x="244.60447" id="svg_571">Velocity (ms   )</tspan>
+           </text>
+           <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_568" y="280.51498" x="324.35852" xml:space="preserve">
+            <tspan stroke="null" stroke-width="0.26458" y="280.51498" x="324.35852" id="svg_569">-1</tspan>
+           </text>
+          </g>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" fill="#000000" stroke-width="0.26458" id="svg_565" y="509.91721" x="400.63757" xml:space="preserve">
+           <tspan stroke="null" font-size="14.1111px" fill="#000000" stroke-width="0.26458" y="509.91721" x="400.63757" id="svg_566">A</tspan>
+          </text>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_563" y="420.15273" x="401.87151" xml:space="preserve">
+           <tspan stroke="null" font-size="14.1111px" stroke-width="0.26458" y="420.15273" x="401.87151" id="svg_564">E</tspan>
+          </text>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_561" y="415.77818" x="528.73366" xml:space="preserve">
+           <tspan stroke="null" font-size="14.1111px" stroke-width="0.26458" y="415.77818" x="528.73366" id="svg_562">B</tspan>
+          </text>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_559" y="513.36443" x="528.73364" xml:space="preserve">
+           <tspan stroke="null" font-size="14.1111px" stroke-width="0.26458" y="513.36443" x="528.73364" id="svg_560">D</tspan>
+          </text>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_557" y="594.12544" x="524.69559" xml:space="preserve">
+           <tspan stroke="null" font-size="14.1111px" stroke-width="0.26458" y="594.12544" x="524.69559" id="svg_558">C</tspan>
+          </text>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" stroke-width="0.26458" id="svg_555" y="592.77943" x="403.89054" xml:space="preserve">
+           <tspan stroke="null" font-size="14.1111px" stroke-width="0.26458" y="592.77943" x="403.89054" id="svg_556">O</tspan>
+          </text>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" fill="#ff2a2a" stroke-width="0.26458" id="svg_553" y="540.73013" x="331.29546" xml:space="preserve">
+           <tspan stroke="null" fill="#ff2a2a" stroke-width="0.26458" y="540.73013" x="331.29546" id="svg_554">initial velocity</tspan>
+          </text>
+          <g stroke="null" fill="#ff2a2a" id="svg_550">
+           <path stroke="#000000" fill="#ff2a2a" stroke-width="0.965" stroke-miterlimit="4" id="svg_552" d="m391.57346,528.45791c9.59037,-15.31095 9.59037,-15.31095 9.59037,-15.31095"/>
+           <path stroke="#000000" fill="#ff2a2a" stroke-width="0.26458px" id="svg_551" d="m401.69728,512.47421l-4.93734,2.88508l4.283,2.61739l0.65434,-5.50247z"/>
+          </g>
+          <g stroke="null" fill="#ff2a2a" transform="rotate(102.69905853271484 442.70715332031244,461.5676879882813) " id="svg_547">
+           <path stroke="#000000" fill="#ff2a2a" stroke-width="0.965" stroke-miterlimit="4" id="svg_549" d="m391.57346,528.45791c9.59037,-15.31095 9.59037,-15.31095 9.59037,-15.31095"/>
+           <path stroke="#000000" fill="#ff2a2a" stroke-width="0.26458px" id="svg_548" d="m401.69728,512.47421l-4.93734,2.88508l4.283,2.61739l0.65434,-5.50247z"/>
+          </g>
+          <text stroke="null" font-size="10.5833px" font-family="sans-serif" fill="#ff2a2a" stroke-width="0.26458" id="svg_545" y="381.33619" x="325.75083" xml:space="preserve">
+           <tspan stroke="null" fill="#ff2a2a" stroke-width="0.26458" y="381.33619" x="325.75083" id="svg_546">final velocity</tspan>
+          </text>
+          <path stroke="#000000" fill="#ffd5d5" stroke-width="0.26458px" id="svg_544" d="m418.82501,507.72354l104.69807,-90.74736l0.0557,91.19485l-104.75377,-0.44749z"/>
+          <path stroke="null" fill="#f6ffd5" stroke-width="0.26458px" id="svg_543" d="m416.38702,511.38052l107.00062,-0.81267l0.54177,66.23203l-107.81328,0.13544l0.27089,-65.5548z"/>
+         </g>
+        </g>
+       </g>
+      </svg>
+          <p>The area of ABCO (s) can be divided into the area of the triangle ADB and the rectangle ADCO.</p>
+          <svg width="500" height="200" xmlns="http://www.w3.org/2000/svg">
+       <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+      
+       <g id="Layer_1">
+        <title>Layer 1</title>
+        <metadata id="svg_125">image/svg+xml</metadata>
+        <metadata id="svg_258">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.47675620158044296,0,0,0.47675620158044296,0,0) " id="svg_117">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.47675620158044296,0,0,0.47675620158044296,0,0) " id="svg_229">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.24999877810627513,0,0,0.24999877810627513,0,0) " id="svg_349">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.2743764469683043,0,0,0.2743764469683043,0,0) " id="svg_473">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.510217644820532,0,0,0.510217644820532,0,0) " id="svg_600">image/svg+xml</metadata>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_603" y="57.71399" x="95.10317" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">area ADB =</text>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_604" y="37.90627" x="216.9622" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">1</text>
+        <line stroke-linecap="null" stroke-linejoin="null" id="svg_605" y2="47.64992" x2="239.62258" y1="48.41915" x1="208.08419" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke="#000" fill="none"/>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_606" y="69.95756" x="218.8534" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">2</text>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_607" y="50.72684" x="248.85332" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">X</text>
+        <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_608" y="48.62378" x="271.55967" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">OC X BD</text>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_609" y="134.77835" x="96.93803" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">area ADB =</text>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_610" y="114.97063" x="218.79707" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">1</text>
+        <line stroke-linecap="null" stroke-linejoin="null" id="svg_611" y2="124.71428" x2="241.45744" y1="125.48351" x1="209.91906" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke="#000" fill="none"/>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_612" y="147.02192" x="220.68826" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">2</text>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_613" y="127.7912" x="250.68819" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">X</text>
+        <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_614" y="125.68814" x="273.39454" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">t X at</text>
+       </g>
+      </svg>
+          
+          <svg width="500" height="200" xmlns="http://www.w3.org/2000/svg">
+       <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+      
+       <g id="Layer_1">
+        <title>Layer 1</title>
+        <metadata id="svg_125">image/svg+xml</metadata>
+        <metadata id="svg_258">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.47675620158044296,0,0,0.47675620158044296,0,0) " id="svg_117">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.47675620158044296,0,0,0.47675620158044296,0,0) " id="svg_229">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.24999877810627513,0,0,0.24999877810627513,0,0) " id="svg_349">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.2743764469683043,0,0,0.2743764469683043,0,0) " id="svg_473">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.510217644820532,0,0,0.510217644820532,0,0) " id="svg_600">image/svg+xml</metadata>
+        <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_603" y="61.7544" x="137.52748" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">area ADCO =</text>
+        <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_608" y="60.12686" x="272.19298" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">OC X OA</text>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_609" y="138.81876" x="139.36234" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">area ADB =</text>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="18" id="svg_614" y="141.66883" x="285.96813" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">t X u</text>
+       </g>
+      </svg>
+          <p>Which leaves us with </p>
+          <svg width="499.99999999999994" height="200" xmlns="http://www.w3.org/2000/svg">
+       <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+      
+       <g id="Layer_1">
+        <title>Layer 1</title>
+        <metadata id="svg_125">image/svg+xml</metadata>
+        <metadata id="svg_258">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.47675620158044296,0,0,0.47675620158044296,0,0) " id="svg_117">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.47675620158044296,0,0,0.47675620158044296,0,0) " id="svg_229">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.24999877810627513,0,0,0.24999877810627513,0,0) " id="svg_349">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.2743764469683043,0,0,0.2743764469683043,0,0) " id="svg_473">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.510217644820532,0,0,0.510217644820532,0,0) " id="svg_600">image/svg+xml</metadata>
+        <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="25" id="svg_615" y="98.60018" x="140.05497" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">s = ut +</text>
+        <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="25" id="svg_616" y="76.98887" x="247.09323" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">1</text>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="25" id="svg_617" y="121.00163" x="247.90784" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">2</text>
+        <line stroke-linecap="null" stroke-linejoin="null" id="svg_618" y2="91.96937" x2="268.90419" y1="91.96937" x1="239.06548" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke="#000" fill="none"/>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="25" id="svg_619" y="98.42098" x="281.80741" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">at</text>
+        <text xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="25" id="svg_620" y="80.67905" x="306.00096" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="0" stroke="#000" fill="#000000">2</text>
+       </g>
+      </svg>
+      <br>
+      <div class = "flex-container">
+        <div>
+          <object data = "arrow_animated.svg" type = "image/svg+xml" width = "100" height = "100"></object>
+        </div>
+        <div>
+          <a href = "lawsofmotion.html">Laws of motion</a>
+        </div>
+        </div>
+        </div>
+      </div>
+</body>
+</html>

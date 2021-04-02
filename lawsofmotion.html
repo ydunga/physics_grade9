@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "main.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class = "container">
+        <div class = "toppane">
+          <div class ="heading">
+            <div class = "back">Laws of motion</div>
+          </div>
+          <p>In the previous section you explored what motion, velocity and acceleration are.</p>
+          <p>If someone asks you what causes motion, you might think its a silly question. When you hit a football, it moves because of the force with which you hit it. That is simple enough. </p>
+          <p>But what about the motion of the earth around the sun and the motion of the moon around the earth. What causes this?</p>
+          <p>Moreover, if you think about, the earth actually revolves around the sun in an elliptical orbit. Why does the earth move around in this specific path?</p>
+          <p>Let's explore what scientists Galileo and Isaac Newton had to say about motion. </p>
+        </div>
+        <div class = "middlepane">
+          <div class = "subheading">
+            <div class = "subback">First law of Motion</div>     
+          </div>
+                <p>Before you read about the first law of motion, go ahead and <b>click on the red balls in the illustrations shown below </b>.</p>
+            <br>
+          
+      <svg width="500" height="200" xmlns="http://www.w3.org/2000/svg">
+      
+        <line x1 = "50" y1 = "20" x2 = "250" y2 = "180" stroke = "black" stroke-width = "3"/>
+        <line x1 = "250" y1 = "180" x2 = "450" y2 = "20" stroke = "black" stroke-width = "3"/>
+        <circle cx = "70" cy = "20" r = "10" fill = "red" stroke = "black" stroke-width = "3" id = "moveit8"/>
+        <path id = "followpath8" d = "m 0,0, l 180 ,150 l 180 ,-150" stroke = "none" fill = "none"/>
+        <animateMotion
+                       xlink:href = "#moveit8"
+                       dur = "3s"
+                       begin = "click"
+                       fill = "freeze">
+          <mpath xlink:href = "#followpath8"/>
+        </animateMotion>
+      </svg>
+          <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+       <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+      
+       <g id="Layer_1">
+        <title>Layer 1</title>
+        <metadata id="svg_125">image/svg+xml</metadata>
+        <metadata id="svg_258">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.47675620158044296,0,0,0.47675620158044296,0,0) " id="svg_117">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.47675620158044296,0,0,0.47675620158044296,0,0) " id="svg_229">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.24999877810627513,0,0,0.24999877810627513,0,0) " id="svg_349">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.2743764469683043,0,0,0.2743764469683043,0,0) " id="svg_473">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.510217644820532,0,0,0.510217644820532,0,0) " id="svg_600">image/svg+xml</metadata>
+      
+        <metadata transform="matrix(0.07135070815786904,0,0,0.07135070815786904,0,0) " id="svg_631">image/svg+xml</metadata>
+        <g stroke="null" id="svg_633">
+         <g stroke="null" transform="matrix(1.7682828051369857,0,0,1.639693845982692,-5952.466735984825,-2195.555622133184) " id="svg_628">
+          <path stroke="black" fill="none" stroke-width="2.565" stroke-miterlimit="4" id="svg_630" d="m3411.21529,1356.92656c77.8631,93.36012 77.8631,93.36012 77.8631,93.36012l107.34524,-1.13392"/>
+              <path stroke="black" fill="none" stroke-width="2.565" stroke-miterlimit="4" id="followpath7" d="m0,0 c77.8631,90.36012 70.8631,80.36012 70.8631,80.36012 l187.34524,-1.13392"/>
+           
+          <ellipse id = "moveit7" stroke="#000000" opacity="0.997" fill="red"  stroke-width="2.02398" stroke-miterlimit="4" ry="8.31548" rx="8.50446" cy="1361.0843" cx="3426.52333" id="svg_629"/>
+           <animateMotion
+                          xlink:href = "#moveit7"
+                          dur = "2s"
+                          begin = "click"
+                          fill = "freeze"
+                          
+                          >
+             <mpath xlink:href = "#followpath7"/>
+           </animateMotion>
+             
+         </g>
+        </g>
+       </g>
+      </svg>
+      <br>
+      <br>
+      
+      
+          <br>
+      
+          <p>In the first illustration, when the cirlce is moving from the left to right, its velocity increases while moving down and decreases while moving up. </p>
+          <p>You should also have noticed that the circle reaches the same height on the right as it was on the left. </p>
+          <p>In the second illustration, the incline of the second plane has been changed and it is a straight line instead. </p>
+              <p>As the circle moves down the left plane, its velocity increases.  </p>
+          <p>We've shown here that the circle eventually comes to a stop once its off the plane.  </p>
+          <p>Theoretically, in the second illustration the circle could keep moving in straight uniform motion, trying to reach the height it was initially released from.</p>
+          <p>Galileo also made these observations and concluded that objects move with a constant speed when no force acts on them. </p>
+          <p>Newton further built on Galileo's observation and came up with the first law of motion. </p>
+          <p>The first law states that an object remains in a state of rest or uniform motion in a straight line unless an external force acts on it.  </p>
+          <p>The tendency of undisturbed objects to stay at rest or to keep moving with the same velocity is called <b>inertia</b>. </p>
+          <p>The first law of motion is thus called the <b>law of inertia</b>.</p>
+          <p>You can think of inertia as the property of an object to stay in its state of rest.</p>
+          <p>Have a look at the two illustrations below - </p>
+          <br>
+          <svg height = "200" width = "500">
+        <circle cx = "180" cy = "100" r = "60" fill = "red" stroke = "black" stroke-width = "3" id = "moveit9"/>
+        <text x = "50" y = "20">Force</text>
+        <line x1 = "50" y1 = "50" x2 = "50" y2 = "50" stroke = "black" id = "force1" stroke-width = "4"/>
+        <animate 
+                 xlink:href = "#force1"
+                 attributeName = "x2"
+                 from = "50"
+                 to = "150"
+                 dur = "2s"
+                 begin= "0s"
+                 repeatCount = "indefinite"
+                 id = "forceline1"/>
+        <line x1 ="50" y1 = "70" x2 = "50" y2 = "70" stroke = "black" stroke-width = "4" id = "force2"/>
+        <animate
+                 xlink:href = "#force2"
+                 attributeName = "x2"
+                 from = "50"
+                 to = "120"
+                 dur = "2s"
+                 begin = "0s"
+                 repeatCount = "indefinite"
+                 id = "forceline2"/>
+          <line x1 ="50" y1 = "90" x2 = "50" y2 = "90" stroke = "black" stroke-width = "4" id = "force3"/>
+        <animate
+                 xlink:href = "#force3"
+                 attributeName = "x2"
+                 from = "50"
+                 to = "105"
+                 dur = "2s"
+                 begin = "0s"
+                 repeatCount = "indefinite"
+                 id = "forceline3"/>
+            <line x1 ="50" y1 = "110" x2 = "50" y2 = "110" stroke = "black" stroke-width = "4" id = "force4"/>
+         <animate
+                 xlink:href = "#force4"
+                 attributeName = "x2"
+                 from = "50"
+                 to = "105"
+                 dur = "2s"
+                 begin = "0s"
+                 repeatCount = "indefinite"
+                 id = "forceline4"/>
+              <line x1 ="50" y1 = "130" x2 = "50" y2 = "130" stroke = "black" stroke-width = "4" id = "force5"/>
+         <animate
+                 xlink:href = "#force5"
+                 attributeName = "x2"
+                 from = "50"
+                 to = "120"
+                 dur = "2s"
+                 begin = "0s"
+                 repeatCount = "indefinite"
+                 id = "forceline5"/>
+         <animate
+                 xlink:href = "#moveit9"
+                 attributeName = "cx"
+                 from = "150"
+                 to = "200"
+                 dur = "2s"
+                 begin = "forceline5.begin +2s"
+                  id = "ballmove"
+                  repeatCount = "indefinite"
+      
+                 />
+      </svg>
+      
+      <svg height = "200" width = "500">
+        <circle cx = "180" cy = "100" r = "20" fill = "red" stroke = "black" stroke-width = "3" id = "moveit10"/>
+       
+        <line x1 = "40" y1= "90" x2 = "40" y2 = "90" stroke = "black" stroke-width = "2" id = "force6"/>
+        <animate
+                 xlink:href = "#force6"
+                 attributeName = "x2"
+                 from = "40"
+                 to = "160"
+                 dur = "2s"
+                 begin = "0s"
+                 repeatCount = "indefinite"
+                 id = "forceline6"
+                 />
+          <line x1 = "40" y1= "110" x2 = "40" y2 = "110" stroke = "black" stroke-width = "2" id = "force7"/>
+                  <animate
+                 xlink:href = "#force7"
+                 attributeName = "x2"
+                 from = "40"
+                 to = "160"
+                 dur = "2s"
+                 begin = "0s"
+                           repeatCount = "indefinite"
+                 />
+        <animate
+                 xlink:href = "#moveit10"
+                 attributeName = "cx"
+                 from = "180"
+                 to = "240"
+                 dur = "2s"
+                 begin = "forceline6.begin + 2s"
+                 repeatCount = "indefinite"/>
+      </svg>
+          <br>
+          <p>In the first illustration, you have a big cirlce. To make this circle move from its state of rest you need to apply a larger amount of force. </p>
+          <p>Whereas for the second smaller ball, lesser force is needed. </p>
+          <p>Why is that?</p>
+          <p>The simple intuitive explanation is that the bigger object has larger mass. Heavier/ larger objects offer more inertia. </p>
+          <div class = "subheading">
+            <div class = "subback">Second law of motion</div>
+          </div>
+          <p>Have a look at what happens when you click on the red ball in the two illustrations below. </p>
+          <p>The first ball moves with much higher velocity. While the second one is slower. </p>
+          <p>Which ball do you think would cause more damage to the wall?</p>
+          <br>
+          <svg width = "400" height = "400">
+              <text x = "340" y = "20" stroke = "black">Wall</text>
+        <line x1 = "360" y1 = "30" x2 = "360" y2 = "360" stroke = "gray" stroke-width = "3"/>
+        <line x1 = "100" y1 = "30" x2 = "100" y2 = "200" stroke = "black" stroke-width = "3" id = "string"/>
+        <circle cx = "100" cy = "200" r = "30" stroke = "black" fill = "red" stroke-width = "3" id = "strikeball"/>
+       <path d = "m 0 0 c 70 60, 200 80, 240 50" stroke="" fill="transparent" id = "strikepath"/>
+        <animateMotion
+                       xlink:href = "#strikeball"
+                       dur = "0.5s"
+                       fill = "freeze"
+                       begin = "click"
+                       id = "ballermove"
+                       >
+          <mpath xlink:href = "#strikepath"/>
+        </animateMotion>
+        <animate 
+                 xlink:href = "#string"
+                 attributeName = "x2"
+                 from = "100"
+                 to = "350"
+                 dur = "0.5s"
+                 begin = "ballermove.begin"
+                 fill = "freeze"
+                 />
+          <animate 
+                 xlink:href = "#string"
+                 attributeName = "y2"
+                 from = "200"
+                 to = "270"
+                 dur = "0.5s"
+                 begin = "ballermove.begin"
+                 fill = "freeze"
+                 />
+      
+      </svg>
+      <br>
+      <svg width = "400" height = "400">
+          <text x = "340" y = "20" stroke = "black">Wall</text>
+        <line x1 = "360" y1 = "30" x2 = "360" y2 = "360" stroke = "gray" stroke-width = "3"/>
+        <line x1 = "100" y1 = "30" x2 = "100" y2 = "200" stroke = "black" stroke-width = "3" id = "string2"/>
+        <circle cx = "100" cy = "200" r = "30" stroke = "black" fill = "red" stroke-width = "3" id = "strikeball2"/>
+       <path d = "m 0 0 c 70 60, 200 80, 240 50" stroke="" fill="transparent" id = "strikepath2"/>
+        <animateMotion
+                       xlink:href = "#strikeball2"
+                       dur = "1.5s"
+                       fill = "freeze"
+                       begin = "click"
+                       id = "ballermove2"
+                       >
+          <mpath xlink:href = "#strikepath2"/>
+        </animateMotion>
+        <animate 
+                 xlink:href = "#string2"
+                 attributeName = "x2"
+                 from = "100"
+                 to = "350"
+                 dur = "1.5s"
+                 begin = "ballermove2.begin"
+                 fill = "freeze"
+                 />
+          <animate 
+                 xlink:href = "#string2"
+                 attributeName = "y2"
+                 from = "200"
+                 to = "270"
+                 dur = "1.5s"
+                 begin = "ballermove2.begin"
+                 fill = "freeze"
+                 />
+      
+      </svg>
+          <p>The ball moving at the higher velocity would cause more damage. </p>
+          <p>The impact produced by an object depends on its mass and velocity. </p>
+          <p>This property which combines and object's mass and velocity is known as <b>momentum</b>. </p>
+          <p>We can define momentum(p) as the product of mass (m) and velocity(v). </p>
+              <p>The unit of measurement for momentum is kilogram-meter per second. </p>
+          <p>Momentum has both direction and magnitude. </p>
+          <p>So if the application of force on an object causes the velocity of the object to change, that means the application of force can also change the momentum of an object. </p>
+          <p>This is what the second law of motion tells us - that the rate of change of momentum of an object is proportional to the applied unbalanced force in the direction of the force.</p>
+          <br>
+          <p>Suppose you have an object with moving along a straight line<br>
+            mass = m
+            <br>
+            initial velocity = u
+            <br>
+            final velocity = v
+            <br>
+            over time period = t
+            
+          </p>
+          <p>Then the initial and final momentum of the object willl be 
+          <br>
+            p<sub>1</sub> = m*u
+            <br>
+            p<sub>2</sub> = m*v
+          </p>
+          <p>and the change in the momentum &#8733 p<sub>2</sub> - p<sub>1</sub>.</p>
+          <p>Change in momentum &#8733 p<sub>2</sub> - p<sub>1</sub> 
+          <br>
+            &#8733 mv - mu
+            <br>
+            &#8733 m*(v-u)
+            
+          </p>
+          <p>If you want to get the rate of change of momentum over time, you can divide this expression by t and you would have 
+          <br>
+            Rate of change of momentum &#8733 m*(v-u)/ t
+          </p>
+          <p>We just stated the rate of change of momentum of an object is proportional to the force applied to it. 
+          <br>
+            F &#8733 m*(v-u)/t
+          </p>
+          <p>If you look at this expression, you will realise that (v-u)/t is acceleration. </p>
+          <p>So we can simplify this expression 
+          <br>
+             F = k*m*a
+          </p>
+          <p>Where k is a constant of proportionality. </p>
+          <p>This gives us an expression for measuring the force applied to an object. </p>
+          <p>The unit of measurement for force is kg m s <sup>-2</sup> or as is commonly known - Newton. </p>
+          <p>One Newton of force is the amount of force that produces an acceleration of 1 m s <sup>-2</sup>.</p>
+        </div>
+        <div class = "bottompane">
+          <div class = "subheading">
+            <div class = "subback">Third law of motion</div>
+          </div>
+          <p>The first and second laws of motion tell us what happens to an object when external force acts on it. </p>
+          <p>The third law of motion actually tells us that when one object exerts force on another object, the second object exerts an equal amount of force, but in the opposite direction. </p>
+          <p>Even though the amount of force exerted by each object might be the same, it will not produce the same amount of acceleration in each object if the mass of the two objects is different. </p>
+        <br>
+        <div class = "flex-container">
+          <div>
+            <object data = "arrow_animated.svg" type = "image/svg+xml" width = "100" height = "100"></object>
+          </div>
+          <div>
+            <a href = "momentofinertia.html">Why care about inertia</a>
+          </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
